@@ -1,0 +1,23 @@
+.chat-side
+  .chat-side__user-name
+    .top-items
+      %p.top-items__name
+        わたし
+      %ul.top-items__icons
+        %li.top-items__icons__new-group
+        = link_to '#' , class: 'new-group' do
+          = icon('fas','edit')
+        %li.top-items__icons__edit-user
+        = link_to '#' , class: 'edit-user' do
+          = icon('fas','cog')
+  .chat-side__group-list
+    .group
+      %p.group__name
+        グループA
+      %p.group__latest-message
+        まだメッセージはありません
+    .group
+      %p.group__name
+        グループ10
+      %p.group__latest-message
+        こんにちは

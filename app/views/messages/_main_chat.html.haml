@@ -1,0 +1,36 @@
+.chat-main
+  .chat-main__group
+    .chat-group
+      %h2.chat-group__name
+        グループ10
+      %ul.chat-group__member
+        Member : わたし
+    = link_to '#' ,class: 'group-edit' do
+      .group-edit__btn
+        edit
+  .chat-main__message-list
+    .message
+      .message__upper-info
+        %p.message__upper-info__user-name
+          わたし
+        %p.message__upper-info__date
+          2020-01-06(Mon) 10:00:29
+      %p.message__text
+        こんにちは
+      .message__upper-info
+        %p.message__upper-info__user-name
+          わたし
+        %p.message__upper-info__date
+          2020-01-06(Mon) 18:12:32
+      %p.message__text
+        こんばんわ
+  .chat-main__message-form
+    .message-box
+      .message-box__input
+        .input-place
+          type a message
+      %label{class: "message-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file", class: "message-box__image__text"}
+      .submit-btn
+        Send
