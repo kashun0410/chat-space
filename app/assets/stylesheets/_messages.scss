@@ -78,6 +78,12 @@
       &__member {
         font-size: 12px;
         color: #999999;
+        display: flex;
+        li {
+          font-size: 10px;
+          float: left;
+          padding-left: 10px;
+        }
       }
     }
     .group-edit {
@@ -113,43 +119,47 @@
         }
       }
       &__text {
-        color: #434A54;
-        font-size: 14px;
-        padding-bottom: 46px;
+        &__content {
+          color: #434A54;
+          font-size: 14px;
+          padding-bottom: 46px;
+        }
       }
     }
   }
   &__message-form {
     height: 90px;
+    width: 100%;
     background-color: #d2d2d2;
     padding: 20px 40px;
     .message-box {
-      display: flex;
       position: relative;
       &__input {
-        width: 100%;
-        .input-place {
-          height: 50px;
-          width: 100%;
-          line-height: 50px;
-          padding: 0 40px 0 10px;
-          background-color: $color-white;
-          color: #434a54;
-          border-style: none;
-        }
+        height: 50px;
+        width: calc(100% - 115px);
+        margin: 0 auto;
+        // .input-place {
+        //   height: 50px;
+        //   width: 100%;
+        //   line-height: 50px;
+        //   padding: 0 40px 0 10px;
+        //   background-color: $color-white;
+        //   color: #434a54;
+        //   border-style: none;
+        // }
       }
       &__image {
         position: absolute;
         font-size: 21px;
         top: 10px;
-        right: 120px;
+        right: 130px;
         &__text {
           display: none;
         }
       }
     }
   }
-  .submit-btn {
+  .form-submit {
     height: 50px;
     width: 100px;
     padding: 0 30px;
@@ -157,7 +167,10 @@
     background-color: $links-color;
     color: $color-white;
     line-height: 50px;
-    float: right;
+    position: absolute;
+    margin: 0 auto;
+    top: 0px;
+    right: 0px;
   }
 }
 
