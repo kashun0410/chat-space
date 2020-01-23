@@ -14,7 +14,7 @@
         edit
   .chat-main__message-list
     - @messages.each do |message|
-      .message
+      .message{data: {message: {id: message.id}}}
         .message__upper-info
           %p.message__upper-info__user-name
             = message.user.name
